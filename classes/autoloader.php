@@ -1,5 +1,6 @@
 <?php
 
+// Autoloader
 /**Функция подключает классы, если при их вызове они не были найдены*/
 spl_autoload_register(function ($class) {
 	$file = CLASSES_PATH . $class.'.php';

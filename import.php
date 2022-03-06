@@ -11,6 +11,7 @@ class ImportPlanner5D {
 
 	function run() {
 
+        // One more comment
 		echo 'Import objects - Start' . "\n";
 		echo '<br>';
 		$page = 1;
@@ -106,10 +107,12 @@ class ImportPlanner5D {
 	}
 
 	function saveImage($url, $path){
-		if (empty($url)) return '';
+		if (empty($url)) return false;
 
 		if (file_exists($path)) unlink($path);
 		file_put_contents($path, $this->getFile($url));
+
+        return true;
 	}
 
 	function saveToDB() {
