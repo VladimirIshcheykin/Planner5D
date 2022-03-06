@@ -6,6 +6,7 @@ require_once(dirname(__FILE__) . '/system/require.php');
 try {
 	$path = urldecode($_SERVER['REQUEST_URI']);
 
+    // First comment
 	if (strpos($path, '/') === 0) $path = substr($path, 1);
 	$ind = strpos($path, "?");
 	if ($ind !== false) $path = substr($path, 0, $ind);
