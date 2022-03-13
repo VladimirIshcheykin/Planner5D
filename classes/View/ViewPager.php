@@ -1,5 +1,7 @@
 <?php
 
+namespace Views;
+
 class ViewPager extends View {
 
 	function __construct() {

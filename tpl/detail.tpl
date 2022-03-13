@@ -2,11 +2,10 @@
 $id_object = $this->get('id_object');
 $item = $this->get('item');
 $images = $this->get('images');
-$url_image = $this->get('url_image');
 ?>
 
 <div class="back">
-    <a onclick="history.back();">Назад</a>
+    <a onclick="history.back();">Back</a>
 </div>
 
 <h1><?= $item['name'] ?></h1>
@@ -17,11 +16,11 @@ $url_image = $this->get('url_image');
 
     <div class="image">
         <div class="image-large">
-            <img id="image-large" src="<?= $url_image . $id_object . '/' . $item['id_object_image'] . '_large.jpg' ?>">
+            <img id="image-large" src="<?= $item['image_large_url'] ?>">
         </div>
         <div class="images-small">
         <?php foreach ($images as $image): ?>
-            <div class=item><img class="img-preview" data="<?= $url_image . $id_object . '/' . $image['id_object_image'] . '_large.jpg' ?>" src="<?= $url_image . $id_object . '/' . $image['id_object_image'] . '_small.jpg' ?>"></div>
+            <div class=item><img class="img-preview" data="<?= $image['image_large_url'] ?>" src="<?= $image['image_small_url'] ?>"></div>
         <?php endforeach; ?>
             <div class="item empty"></div>
             <div class="item empty"></div>
@@ -33,8 +32,9 @@ $url_image = $this->get('url_image');
         </div>
     </div>
 
-</div>
 
+
+</div>
 
 <script>
     $(function(){

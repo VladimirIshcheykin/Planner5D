@@ -1,7 +1,5 @@
 <div class="back">
-    <a onclick="history.back();">Назад</a>
+    <a onclick="history.back();">Back</a>
 </div>
-<h1>Объект не найден!</h1>
-
-
+<h1>Object not found!</h1>
 

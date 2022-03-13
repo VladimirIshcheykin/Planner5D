@@ -1,16 +1,10 @@
 <?php
 
-// Autoloader
 /**Функция подключает классы, если при их вызове они не были найдены*/
 spl_autoload_register(function ($class) {
-	$file = CLASSES_PATH . $class.'.php';
+	$file = CLASSES_PATH . str_replace('\\', '/', $class) . '.php';
 	if (file_exists($file)) {
-		require $file;
-		return true;
-	}
-	$file = CLASSES_PATH . 'Models/' . $class.'.php';
-	if (file_exists($file)) {
-		require $file;
+		require_once $file;
 		return true;
 	}
 	return false;
