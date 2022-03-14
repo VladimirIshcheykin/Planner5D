@@ -1,6 +1,6 @@
 <?php
 
-namespace Models\Import;
+namespace Import;
 
 use Models\Sources\InterfaceSource;
 

@@ -24,7 +24,7 @@ class MysqlStoreClass implements InterfaceStore {
 				$values[] = '"'.$v.'"';
 			}
 			$sql = 'insert into '.$this->table.' ('.implode(', ', $keys).') values ('.implode(', ', $values).')';
-			echo $sql.'<br>';
+			//echo $sql.'<br>';
 			$ids[] = $this->source->simpleQuery($sql);
 		}
 		return $ids;
